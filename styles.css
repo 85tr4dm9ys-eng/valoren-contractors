@@ -58,8 +58,7 @@ justify-content:center;
 font-size:30px;
 font-weight:900;
 color:var(--gold2);
-background:
-radial-gradient(circle,rgba(139,17,22,.38),rgba(255,255,255,.03) 55%);
+background:radial-gradient(circle,rgba(139,17,22,.38),rgba(255,255,255,.03) 55%);
 box-shadow:0 0 34px rgba(139,17,22,.34),0 0 22px rgba(212,175,55,.16);
 }
 
@@ -111,6 +110,7 @@ border-radius:999px;
 font-weight:900;
 cursor:pointer;
 box-shadow:0 14px 45px rgba(212,175,55,.18);
+transition:.25s ease;
 }
 
 .quote-btn:hover,.gold-btn:hover,.outline-btn:hover{
@@ -121,7 +121,7 @@ transform:translateY(-3px);
 background:rgba(255,255,255,.05);
 color:white;
 border:1px solid rgba(212,175,55,.55);
-padding:15px 24px;
+padding:15px 28px;
 border-radius:999px;
 font-weight:900;
 display:inline-flex;
@@ -184,23 +184,29 @@ color:#c8d2df;
 max-width:800px;
 }
 
-.hero-badges{
+.buttons{
 display:flex;
+gap:16px;
 flex-wrap:wrap;
+margin-top:30px;
+}
+
+.hero-badges{
+display:grid;
+grid-template-columns:repeat(4,1fr);
 gap:12px;
-margin-top:32px;
-max-width:980px;
+margin-top:30px;
+max-width:900px;
 }
 
 .hero-badges div{
+height:54px;
+padding:0 15px;
 display:flex;
 align-items:center;
 justify-content:center;
 gap:10px;
-min-width:155px;
-height:60px;
-padding:0 16px;
-background:rgba(255,255,255,.04);
+background:rgba(255,255,255,.035);
 border:1px solid rgba(212,175,55,.28);
 border-radius:14px;
 font-weight:800;
@@ -213,20 +219,21 @@ transition:.25s ease;
 .hero-badges div:hover{
 transform:translateY(-2px);
 border-color:var(--gold);
-background:rgba(139,17,22,.16);
+background:rgba(139,17,22,.13);
 }
 
-.hero-badges span{
+.icon,.service-icon{
+color:var(--gold);
+font-size:23px;
+font-weight:400;
+line-height:1;
+text-shadow:0 0 18px rgba(212,175,55,.28);
+}
+
+.hero-badges span:last-child{
 display:block;
 line-height:1.2;
 text-align:center;
-}
-
-.buttons{
-display:flex;
-gap:16px;
-flex-wrap:wrap;
-margin-top:34px;
 }
 
 .services,.who-we-serve,.process,.why-valoren,.contact{
@@ -292,6 +299,9 @@ position:relative;
 font-size:22px;
 margin-bottom:20px;
 color:white;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .division-card ul{
@@ -431,7 +441,7 @@ border:1px solid rgba(212,175,55,.45);
 display:grid;
 place-items:center;
 font-weight:900;
-font-size:22px;
+font-size:13px;
 }
 
 .footer-scripture{
@@ -448,24 +458,6 @@ text-align:center;
 color:#7d8796;
 padding:20px 5%;
 font-size:13px;
-}
-
-.floating-quote{
-position:fixed;
-right:22px;
-bottom:22px;
-z-index:9999;
-}
-
-.floating-quote button{
-background:linear-gradient(135deg,#ffe08a,#d4af37,#a97816);
-color:#06101a;
-border:none;
-padding:16px 22px;
-border-radius:999px;
-font-weight:900;
-cursor:pointer;
-box-shadow:0 15px 45px rgba(212,175,55,.28);
 }
 
 .quote-modal{
@@ -623,6 +615,7 @@ grid-template-columns:1fr;
 }
 
 .hero-badges div{
+height:54px;
 width:100%;
 }
 
@@ -640,10 +633,5 @@ padding:32px 22px;
 
 .footer-grid{
 padding:45px 5%;
-}
-
-.floating-quote button{
-padding:14px 18px;
-font-size:13px;
 }
 }
